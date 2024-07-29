@@ -1,96 +1,241 @@
-   *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+   width: 0;
+}
 body{
-    display: flex;
+    display: block;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     min-height: 100vh;
-    background: linear-gradient(45deg, #9c27b0, #31d5eb); 
-}
-.container{
-    position: relative;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.container .box{
-    position: relative;
-    width: 400px;
-    background: #fff;
     padding: 20px;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+    background: url(https://habitatbroward.org/wp-content/uploads/2020/01/10-Benefits-Showing-Why-Education-Is-Important-to-Our-Society.jpg);
+    /* background-position: center ; */
+    background-size: auto; 
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
 }
- .container .box h2{
-    font-size: 1.75em;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 15px;
-    width: 100%;
-    text-align: center;
- }
- .container .box #grocery{
-    position: relative;
-    width: 100%;
-    display: flex;
- }
- .container .box #grocery input{
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #333;
-    outline: none;
- }
- .container .box #grocery button{
-    background: #4bae4f;
-    color: #fff;
-    min-width: 100px;
-    font-weight: 500;
-    border: 1px solid #333;
-    cursor: pointer;
-    outline: none;
- }
- .container ol{
-    position: relative;
-    padding: 10px 20px 10px 40px ;
-    width: 100%;
-    min-height: 398px;
-    background: #fff repeating-linear-gradient(transparent 0%, transparent 99%, #000 99%, #000 100%);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
-    background-size: 50px 50px;
- }
- .container ol li{
-    position: relative;
-    font-size: 1.5em;
-    height: 50px;
- }
- .container ol li .remove{
-   position: absolute;
-   top: 5px;
-   right: 0;
-   width: 25px;
-   height: 25px;
+
+
+
+
+ /* navbar */
+ .navbar{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   height: 130px;
+   border-radius: 10px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .information{
+   width: 50%;
+   height: 130px;
+   display: flex;
+   align-items: center;
+}
+
+.navbar .information .icon{
+   min-width: 120px;
+   min-height: 120px;
+   width: 120px;
+   height: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 20px;
+   overflow: hidden;
    border-radius: 50%;
-   background: url(https://static.vecteezy.com/system/resources/thumbnails/008/506/370/small/negative-sign-icon-outline-red-minus-3d-icon-illustration-free-png.png);
-   background-size: cover;
-   cursor: pointer;
- }
- .container ol li.done p{
-   text-decoration: line-through;
-   color: rgba(0, 0, 0, 0.2);
- }
- .container ol li.done p:after{
-   content: '';
-   position: absolute;
-   top: 5px;
-   right: 35px;
-   width: 25px;
-   height: 25px;
-   border-radius: 50%;
-   background: url(https://c0.klipartz.com/pngpicture/775/309/gratis-png-marca-de-verificacion-thumbnail.png);
-   background-size: cover;
-   cursor: pointer;
- }
+}
+.navbar .information .info{
+   margin-left: 20px;
+
+}
+
+.navbar .information .info h2{
+   color: white;
+   font-size: 30px;
+}
+
+.navbar .nav{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.navbar .nav a{
+   color: rgb(22, 177, 224);
+   text-decoration: none;
+   font-size: 20px;
+}
+
+.navbar .nav .active{
+   color: rgb(0, 162, 255);
+   text-decoration: none;
+   font-size: 30px;
+   
+}
+
+
+
+
+/* header */
+.header{
+   width: 73.5%;
+   float: left;
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   margin-right: 20px;
+   height: 1120px;
+   border-radius: 10px;
+   overflow: auto;
+}
+
+
+.bar{
+   width: 100%;
+   float: left;
+   display: block;
+   height: 1120px;
+   border-radius: 10px;
+   overflow: auto;
+}
+
+.galereya{
+   width: 100%;
+   height: 600px;
+   border-radius: 10px;
+   background: rgba(0, 0, 0, 0.7);
+   margin-bottom: 20px;
+}
+
+.oqituvchilar-jamoasi{
+   width: 100%;
+   min-height: 600px;
+   border-radius: 10px;
+   gap: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   flex-wrap: wrap;
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+h1{
+   width: 100%;
+   color: white;
+}
+
+.card{
+   background-color: green;
+   width: 300px;
+   height: 400px;
+}
+
+.yutuclar{
+   width: 100%;
+   height: 450px;
+   border-radius: 10px;
+   gap: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   overflow-x: auto;
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+.lider-oquvchilar{
+   width: 100%;
+   height: 650px;
+   border-radius: 10px;
+   gap: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+.fan-mashguloti{
+   width: 100%;
+   height: 450px;
+   border-radius: 10px;
+   gap: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-content: space-evenly;
+   overflow-x: auto;
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.7);
+
+}
+/* aside */
+
+.aside{
+   width: 25%;
+   float: right;
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   overflow: auto;
+   height: 1120px;
+   bottom: 0;
+   border-radius: 10px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* footer */
+.footer{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   /* margin-top: 20px; */
+   height: 150px;
+   border-radius: 10px;
+   background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,28 +1,35 @@
-let grocery = document.querySelector('#grocery');
-grocery.addEventListener('submit', addItem);
-function addItem(e){
-    e.preventDefault();
-    let data = this.elements.writelist.value;
-    let list = document.querySelector('ol');
-    let item = document.createElement('li');
-    let text = document.createElement('p');
-    
-    text.textContent = data;
-    this.elements.writelist.value = "";
-    item.append(text);
-    list.append(item);
+'use strick';
+window.addEventListener('DOMContentLoaded', () => {
 
-    let remBtn = document.createElement('span');
-    remBtn.classList.add('remove');
-    item.append(remBtn);
-    remBtn.addEventListener('click', deleteItem)
-    item.addEventListener('click', doneItem) 
-    
-}
-function deleteItem(e){
-    this.parentElement.remove()
-}
+    const navParent = document.querySelector('.nav'),
+          navBars = document.querySelectorAll('.tab-bar'),
+          Bars = document.querySelectorAll('.bar')
 
-function doneItem(e){
-    this.classList.toggle('done')
-}
+    function hideBarContent(){
+        Bars.forEach((item) => {
+            item.style.display = 'none'
+        })
+
+        navBars.forEach((item) => {
+            item.classList.remove('active')
+        })
+    }      
+    function showBarContent(i = 0){
+        Bars[i].style.display = 'block'
+        navBars[i].classList.add('active')
+    }     
+    
+    hideBarContent()
+    showBarContent()
+
+    navParent.addEventListener('click', (event) => {
+        const target = event.target
+        if (target && target.classList.contains('tab-bar')) {
+            navBars.forEach((item, idx) => {
+                if (target == item) {
+                    hideBarContent()
+                    showBarContent(idx)                }
+            })
+        }
+    })
+}) 
